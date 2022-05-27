@@ -1,6 +1,5 @@
 <template>
   <div id="__app">
-    <span v-if="error" class="errorMessage">{{ error }}</span>
     <the-sidebar :balance="balance" :balance-title="balanceTitle" @logout="logout" />
     <main class="content">
       <the-games :games="games" @play="play" />
