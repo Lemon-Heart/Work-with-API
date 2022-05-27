@@ -12,8 +12,11 @@
 </template>
 
 <script>
+import AppGamesCart from './AppGamesCart.vue'
+
 export default {
   name: 'TheGames',
+  components: { AppGamesCart },
   props: {
     games: {
       type: Array,

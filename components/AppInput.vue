@@ -43,8 +43,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-label.label-text {
+<style scoped lang="scss">
+.label-text {
   display: flex;
   flex-direction: column;
   position: relative;

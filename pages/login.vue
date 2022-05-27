@@ -2,8 +2,8 @@
   <div id="__app" class="col">
     <span v-if="error" class="errorMessage">{{ error }}</span>
     <form @submit.prevent="auth">
-      <AppInput v-model="login.value" :label="login.label" :name="login.name" />
-      <AppInput v-model="password.value" :label="password.label" :name="password.name" />
+      <app-input v-model="login.value" :label="login.label" :name="login.name" />
+      <app-input v-model="password.value" :label="password.label" :name="password.name" />
       <button class="btn">
         Log in
       </button>
@@ -12,8 +12,11 @@
 </template>
 
 <script>
+import AppInput from '~/components/AppInput.vue'
+
 export default {
   name: 'LoginPage',
+  components: { AppInput },
   middleware ({ $cookies, redirect }) {
     if ($cookies.get('token')) {
       redirect('/')

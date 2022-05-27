@@ -10,8 +10,13 @@
 </template>
 
 <script>
+import TheGames from '~/components/TheGames.vue'
+import TheSidebar from '~/components/TheSidebar.vue'
+import VuePagination from '~/components/vue-pagination.vue'
+
 export default {
   name: 'IndexPage',
+  components: { TheSidebar, TheGames, VuePagination },
   middleware ({ $cookies, redirect }) {
     if (!$cookies.get('token')) {
       redirect('/login')

@@ -38,7 +38,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'cookie-universal-nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-lazy-load'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

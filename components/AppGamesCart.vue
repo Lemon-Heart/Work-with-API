@@ -1,7 +1,7 @@
 <template>
   <div class="games__item" @click="$emit('play')">
     <div class="games__fav" :class="{'active': isFav}" @click.stop="">❤</div>
-    <div class="games__image" :style="{backgroundImage: 'url(' + image + ')'}" />
+    <div class="games__image" :lazy-background="image" />
     <span>{{ title }}</span>
   </div>
 </template>
